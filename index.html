@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Música</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="music-player">
+        <div class="header">
+            <label for="fileInput" class="upload-btn">Subir Música</label>
+            <input type="file" id="fileInput" accept=".mp3" onchange="loadAudio(event)">
+        </div>
+        <img src="https://th.bing.com/th/id/R.f63ea3c75c03e6dd9afc3003f8e0f7f4?rik=Fad3PrRSacZLlQ&riu=http%3a%2f%2f1.bp.blogspot.com%2f-9d_bF5Qlb64%2fUEEwj6LsYpI%2fAAAAAAAAji8%2fmFK6bbph9h8%2fs1600%2fMusic-HD-Wallpapers_Fondos-de-Pantalla-Musica.jpg&ehk=7cGo%2fG4SG6GuAhMX6iCkmoM1UeMayt%2bTvxNY2KVhOLI%3d&risl=&pid=ImgRaw" alt="Music Background">
+        <audio id="audioPlayer" onplay="startWaveAnimation()" onpause="stopWaveAnimation()"></audio>
+        <div class="controls">
+            <button onclick="playPause()">
+                <span id="playIcon">&#9658;</span>
+                <span id="pauseIcon">&#10074;&#10074;</span>
+            </button>
+            <button onclick="stop()">
+                &#9632;
+            </button>
+        </div>
+        <div class="wave"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
